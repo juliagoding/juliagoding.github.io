@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<title>12 Days of C & J</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+      function positionStuff() {
+        var windowHeight = $(window).height()
+        var windowWidth = $(window).width()
+        $('#intro').css('height', windowHeight)
+        $('.transparent.title').css('height', windowHeight)
+
+        /* Title Positioning */
+        for(var i = 1; i < 13; i++) {
+          var title = $('#day'+i).find('.transparent.title h1')
+          var top = $('#day'+i).offset().top + (windowHeight / 2) - ($(this).find('h1').height() / 2)
+          var left = (windowWidth / 2) - (title.width() / 2)
+          title.css('top', top)
+          title.css('left', left)
+        }
+
+        /* Background */
+        var scroll = $(window).scrollTop();
+        if (scroll > $('#day11').offset().top + windowHeight) {
+          $('body').removeClass().addClass('scroll12');
+        } else if (scroll > $('#day10').offset().top + windowHeight) {
+          $('body').removeClass().addClass('scroll11');
+        } else if (scroll > $('#day9').offset().top + windowHeight) {
+          $('body').removeClass().addClass('scroll10');
+        } else if (scroll > $('#day8').offset().top + windowHeight) {
+          $('body').removeClass().addClass('scroll9');
+        } else if (scroll > $('#day7').offset().top + windowHeight) {
+          $('body').removeClass().addClass('scroll8');
+        } else if (scroll > $('#day6').offset().top + windowHeight) {
+          $('body').removeClass().addClass('scroll7');
+        } else if (scroll > $('#day5').offset().top + windowHeight) {
+          $('body').removeClass().addClass('scroll6');
+        } else if (scroll > $('#day4').offset().top + windowHeight) {
+          $('body').removeClass().addClass('scroll5');
+        } else if (scroll > $('#day3').offset().top + windowHeight) {
+          $('body').removeClass().addClass('scroll4');
+        } else if (scroll > $('#day2').offset().top + windowHeight) {
+          $('body').removeClass().addClass('scroll3');
+        } else if (scroll > $('#day1').offset().top + windowHeight) {
+          $('body').removeClass().addClass('scroll2');
+        } else {
+          $('body').removeClass()
+        }
+      }
+      $(document).ready(function() {
+        positionStuff()
+      })
+  		$(window).resize(function() {
+  		  positionStuff()
+  		});
+  		$(window).scroll(function(){
+  	    positionStuff()
+  		});
+    </script>
+  </head>
+  <body>
+    <div id="intro">
+      <h1>12 Days of Us</h1>
+      <h3>In no particular order, my 12 favorite days, places, and memories of ours</h3>
+    </div>
+    <div id="day1" class="dayContainer">
+      <div class="transparent title">
+        <h1>The Houseboat</h1>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
+
+        <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+        <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
+    </div>
+    <div id="day2" class="dayContainer">
+      <div class="transparent title">
+        <h1>Baltimore</h1>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
+
+        <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+        <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
+    </div>
+    <div id="day3" class="dayContainer">
+      <div class="transparent title">
+        <h1>The Cabin</h1>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
+
+        <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+        <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
+    </div>
+    <div id="day4" class="dayContainer">
+      <div class="transparent title">
+        <h1>Songkran</h1>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
+
+        <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+        <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
+    </div>
+    <div id="day5" class="dayContainer">
+      <div class="transparent title">
+        <h1>Mae Hong Son</h1>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
+
+        <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+        <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
+    </div>
+    <div id="day6" class="dayContainer">
+      <div class="transparent title">
+        <h1>Our First Date</h1>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
+
+        <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+        <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
+    </div>
+    <div id="day7" class="dayContainer">
+      <div class="transparent title">
+        <h1>Belknap</h1>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
+
+        <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+        <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
+    </div>
+    <div id="day8" class="dayContainer">
+      <div class="transparent title">
+        <h1>Day 2: Baltimore</h1>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
+
+        <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+        <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
+    </div>
+    <div id="day9" class="dayContainer">
+      <div class="transparent title">
+        <h1>Day 2: Baltimore</h1>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
+
+        <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+        <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
+    </div>
+    <div id="day10" class="dayContainer">
+      <div class="transparent title">
+        <h1>Day 2: Baltimore</h1>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
+
+        <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+        <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
+    </div>
+    <div id="day11" class="dayContainer">
+      <div class="transparent title">
+        <h1>Day 2: Baltimore</h1>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
+
+        <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+        <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
+    </div>
+    <div id="day12" class="dayContainer">
+      <div class="transparent title">
+        <h1>Day 2: Baltimore</h1>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
+
+        <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+        <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
+    </div>
+  </body>
+</html>

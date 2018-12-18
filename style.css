@@ -1,0 +1,75 @@
+body {
+  background-image: url(images/houseboat.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+}
+body.scroll2 {
+  background-image: url(images/baltimore.jpg);
+}
+body.scroll3 {
+  background-image: url(images/cabin.jpg);
+}
+body.scroll4 {
+  background-image: url(images/baltimore.jpg);
+}
+body.scroll5 {
+  background-image: url(images/mae-hong-son.jpg);
+}
+body.scroll6 {
+  background-image: url(images/first-date.jpg);
+}
+body.scroll7 {
+  background-image: url(images/belknap.jpg);
+}
+body.scroll8 {
+  background-image: url(images/baltimore.jpg);
+}
+body.scroll9 {
+  background-image: url(images/baltimore.jpg);
+}
+body.scroll10 {
+  background-image: url(images/baltimore.jpg);
+}
+body.scroll11 {
+  background-image: url(images/baltimore.jpg);
+}
+body.scroll12 {
+  background-image: url(images/baltimore.jpg);
+}
+
+div#intro {
+  text-align: center;
+  background: linear-gradient(to right,rgb(249, 227, 231),rgb(255, 209, 217),rgb(249, 227, 231));
+  border-bottom: 1px solid black;
+}
+div#intro h1 {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+}
+div#intro h3 {
+  position: absolute;
+  top: 275px;
+  left: 100px;
+}
+
+div.dayContainer .transparent.title h1 {
+  position: absolute;
+  color: white;
+  font-size: 4.5em;
+  margin-top: 0;
+  text-shadow: rgba(0,0,0,1) 2px 0px 1px,
+               rgba(0,0,0,1) -2px 0px 1px,
+               rgba(0,0,0,1) 0px 2px 1px,
+               rgba(0,0,0,1) 0px -2px 1px,
+               rgba(0,0,0,1) 3px 3px 5px;
+}
+div.dayContainer .content {
+  background: linear-gradient(to right,rgb(249, 227, 231),rgb(255, 209, 217),rgb(249, 227, 231));
+  padding:40px 100px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
