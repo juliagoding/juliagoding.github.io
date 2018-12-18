@@ -73,3 +73,12 @@ div.dayContainer .content {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
+
+div.dayContainer .content .gallery img {
+  max-width: 100%
+}
+
+div.dayContainer .content .gallery img.two {
+  width: calc(50% - 3px);
+  display: inline-block;
+}
