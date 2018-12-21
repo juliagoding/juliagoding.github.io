@@ -75,10 +75,22 @@ div.dayContainer .content {
 }
 
 div.dayContainer .content .gallery img {
-  max-width: 100%
+  max-width: 100%;
+  border: 1px solid black;
+}
+div.dayContainer .content .gallery img.one {
+  width: calc(75% - 0px);
+  display: inline-block;
+}
+div.dayContainer .content .gallery img.two {
+  width: calc(50% - 5px);
+  display: inline-block;
+}
+div.dayContainer .content .gallery img.three {
+  width: calc(33% - 2px);
+  display: inline-block;
 }
 
-div.dayContainer .content .gallery img.two {
-  width: calc(50% - 3px);
-  display: inline-block;
+div.hide {
+  display: none;
 }

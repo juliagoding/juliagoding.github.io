@@ -25,25 +25,25 @@
         var scroll = $(window).scrollTop();
         if (scroll > $('#day11').offset().top + windowHeight) {
           $('body').removeClass().addClass('scroll12');
-        } else if (scroll > $('#day10').offset().top + windowHeight) {
+        } else if (scroll > $('#day10').offset().top + windowHeight + 50) {
           $('body').removeClass().addClass('scroll11');
-        } else if (scroll > $('#day9').offset().top + windowHeight) {
+        } else if (scroll > $('#day9').offset().top + windowHeight + 50) {
           $('body').removeClass().addClass('scroll10');
-        } else if (scroll > $('#day8').offset().top + windowHeight) {
+        } else if (scroll > $('#day8').offset().top + windowHeight + 50) {
           $('body').removeClass().addClass('scroll9');
-        } else if (scroll > $('#day7').offset().top + windowHeight) {
+        } else if (scroll > $('#day7').offset().top + windowHeight + 50) {
           $('body').removeClass().addClass('scroll8');
-        } else if (scroll > $('#day6').offset().top + windowHeight) {
+        } else if (scroll > $('#day6').offset().top + windowHeight + 50) {
           $('body').removeClass().addClass('scroll7');
-        } else if (scroll > $('#day5').offset().top + windowHeight) {
+        } else if (scroll > $('#day5').offset().top + windowHeight + 50) {
           $('body').removeClass().addClass('scroll6');
-        } else if (scroll > $('#day4').offset().top + windowHeight) {
+        } else if (scroll > $('#day4').offset().top + windowHeight + 50) {
           $('body').removeClass().addClass('scroll5');
-        } else if (scroll > $('#day3').offset().top + windowHeight) {
+        } else if (scroll > $('#day3').offset().top + windowHeight + 50) {
           $('body').removeClass().addClass('scroll4');
-        } else if (scroll > $('#day2').offset().top + windowHeight) {
+        } else if (scroll > $('#day2').offset().top + windowHeight + 50) {
           $('body').removeClass().addClass('scroll3');
-        } else if (scroll > $('#day1').offset().top + windowHeight) {
+        } else if (scroll > $('#day1').offset().top + windowHeight + 50) {
           $('body').removeClass().addClass('scroll2');
         } else {
           $('body').removeClass()
@@ -51,6 +51,31 @@
       }
       $(document).ready(function() {
         positionStuff()
+        time = Date.now()
+        dec20_1 = Date.parse('20 Dec 2018 00:00:00 EST')
+        dec20_2 = Date.parse('20 Dec 2018 12:00:00 EST')
+        dec21_1 = Date.parse('21 Dec 2018 00:00:00 EST')
+        dec21_2 = Date.parse('21 Dec 2018 12:00:00 EST')
+        dec22_1 = Date.parse('22 Dec 2018 00:00:00 EST')
+        dec22_2 = Date.parse('22 Dec 2018 12:00:00 EST')
+        dec23_1 = Date.parse('23 Dec 2018 00:00:00 EST')
+        dec23_2 = Date.parse('23 Dec 2018 12:00:00 EST')
+        dec24_1 = Date.parse('24 Dec 2018 00:00:00 EST')
+        dec24_2 = Date.parse('24 Dec 2018 12:00:00 EST')
+        dec25_1 = Date.parse('25 Dec 2018 00:00:00 EST')
+        dec25_2 = Date.parse('27 Dec 2018 12:30:00 EST')
+        if (time < dec20_1) {$('#day1').addClass('hide')}
+        if (time < dec20_2) {$('#day2').addClass('hide')}
+        if (time < dec21_1) {$('#day3').addClass('hide')}
+        if (time < dec21_2) {$('#day4').addClass('hide')}
+        if (time < dec22_1) {$('#day5').addClass('hide')}
+        if (time < dec22_2) {$('#day6').addClass('hide')}
+        if (time < dec23_1) {$('#day7').addClass('hide')}
+        if (time < dec23_2) {$('#day8').addClass('hide')}
+        if (time < dec24_1) {$('#day9').addClass('hide')}
+        if (time < dec24_2) {$('#day10').addClass('hide')}
+        if (time < dec25_1) {$('#day11').addClass('hide')}
+        if (time < dec25_2) {$('#day12').addClass('hide')}
       })
   		$(window).resize(function() {
   		  positionStuff()
@@ -97,16 +122,34 @@
         </div>
       </div>
     </div>
-    <!--<div id="day2" class="dayContainer">
+    <div id="day2" class="dayContainer">
       <div class="transparent title">
-        <h1>Baltimore</h1>
+        <h1>Baltimore & Chicago</h1>
       </div>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
-
-        <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-
-        <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <p>
+        Being invited to the Chicago and Baltimore trips was really special for me. I really do love hanging with the
+        guys and I appreciate the way they treat me as a normal friend. Seeing you with them always makes me smile and
+        getting to spend time with all of you feels comfortable and normal for me perhaps more than with any other
+        group of people - including both our groups of roommates. I'm excited for the next one to include Gunner too
+        and maybe even Yaz since it was great to have her be there last time.
+        </p>
+        <div class="gallery">
+          <img class="two" src="images/baltimore-1.jpg"/>
+          <img class="two" src="images/baltimore-2.jpg"/>
+        </div>
+        <p>
+        In a way I'm sad that I don't have a group of friends that's 'taken you in' the way
+        the guys took me in. I know its unique with them being a small group of close friends that are all guys,
+        but I sometimes take for granted the way it feels. Clearly I sometimes try a bit too hard to act like a
+        regular friend of your friends and I never mean it to be weird but I'm glad that, as far as I know, that
+        hasn't been the case with these guys. I hope we can soon make friends together that are more our friends
+        than mine or yours.
+        </p>
+        <div class="gallery">
+          <img class="two" src="images/baltimore-3.jpg"/>
+          <img class="two" src="images/baltimore-4.jpg"/>
+        </div>
       </div>
     </div>
     <div id="day3" class="dayContainer">
@@ -115,10 +158,25 @@
       </div>
       <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae aliquet neque. Integer ut tellus eu metus molestie dignissim. Integer nec imperdiet augue. Proin ut maximus eros. Aenean nisl orci, sagittis interdum tempus at, vulputate vel metus. Nam eu enim velit. Pellentesque vitae mauris ut quam laoreet sollicitudin. Ut a lorem et felis rutrum aliquet et et felis. Nulla id lobortis sapien, non eleifend mauris. Integer nunc dolor, convallis sit amet arcu eu, vestibulum maximus ante.</p>
-
+        <div class="gallery">
+          <img class="three" src="images/cabin-3.jpg"/>
+          <img class="three" src="images/cabin-4.jpg"/>
+          <img class="three" src="images/cabin-5.jpg"/>
+          <img class="three" src="images/cabin-6.jpg"/>
+          <img class="three" src="images/cabin-7.jpg"/>
+          <img class="three" src="images/cabin-8.jpg"/>
+        </div>
         <p>Ut erat felis, tempus et placerat vitae, ornare ac tellus. Suspendisse potenti. Sed ut pharetra ante, et fermentum purus. Cras sed sapien tristique, tempus diam eget, elementum urna. Sed dolor enim, tincidunt at congue non, rutrum quis dui. Nam non porta justo, sit amet vestibulum nisl. Donec luctus nisi non odio consectetur, quis sollicitudin sapien ultricies. Sed sodales, magna at convallis gravida, risus orci molestie mauris, sed aliquam augue magna a nisl. Aliquam vulputate viverra orci, ac finibus enim hendrerit ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-
+        <div class="gallery">
+          <img class="three" src="images/cabin-9.jpg"/>
+          <img class="three" src="images/cabin-10.jpg"/>
+          <img class="three" src="images/cabin-11.jpg"/>
+        </div>
         <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <div class="gallery">
+          <img class="two" src="images/cabin-1.jpg"/>
+          <img class="two" src="images/cabin-2.jpg"/>
+        </div>
       </div>
     </div>
     <div id="day4" class="dayContainer">
@@ -228,6 +286,6 @@
 
         <p>Donec porta sem sed ex tempor vehicula. Nullam enim tellus, blandit a lacus nec, accumsan consectetur massa. Mauris ligula sem, varius scelerisque sagittis non, egestas quis lorem. Quisque blandit lobortis felis, ac fermentum turpis euismod et. Maecenas pretium orci vitae turpis maximus, at interdum felis imperdiet. Morbi id leo a nibh fermentum egestas placerat non dolor. Nulla rutrum posuere nibh, pulvinar vehicula massa dapibus id. In hac habitasse platea dictumst. Duis ornare lorem sit amet tincidunt aliquam. Etiam tristique lacinia sagittis. Nullam luctus ante vel purus efficitur, in rhoncus orci tempor. Sed quis tristique orci. Cras at libero gravida, lacinia odio vel, molestie risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
       </div>
-    </div>-->
+    </div>
   </body>
 </html>
